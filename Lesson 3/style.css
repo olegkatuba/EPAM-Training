@@ -1,0 +1,37 @@
+article > div:nth-of-type(2n){
+    color: red;
+}
+
+article > div:nth-of-type(2n-1){
+    color: green;
+}
+
+article > div:nth-of-type(2n+6){
+    text-decoration: underline;
+}
+
+article > div:not(:nth-of-type(n+5)){
+    text-transform: lowercase;
+}
+
+article > div:nth-of-type(n+5){
+    text-transform: uppercase;
+}
+
+article > div{
+    text-align: center;
+    position: relative;
+    left: 100vw;
+    transition: 500ms;
+}
+
+article{
+    font-family: "Times New Roman", sans-serif;
+    font-size: 10em;
+}
+
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+}
