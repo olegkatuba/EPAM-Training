@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 4</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<article>
+    <form action="done.html" target="iframe">
+        <label for="event-name">Event name</label>
+        <input id="event-name" type="text" value="Mel's brthday celebration" placeholder="Event name" minlength="5" required>
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="2"><label for="from-date">From</label></td>
+            </tr>
+            <tr>
+                <td><input id="from-date" type="date" value="2014-02-10" min="2017-09-24" max="2018-09-24" required></td>
+                <td><input type="time" value="19:30" required></td>
+            </tr>
+            <tr>
+                <td class="error">Date occurs in the past</td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="to-date">To</label></td>
+            </tr>
+            <tr>
+                <td><input id="to-date" type="date" value="2014-02-10" min="2017-09-24" max="2018-09-24" required></td>
+                <td><input type="time" value="23:30" required></td>
+            </tr>
+            <tr>
+                <td class="error">Date occurs in the past</td>
+            </tr>
+            </tbody>
+        </table>
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Description" required>Come help celebrate Mel's birthday with dinner, drinks and putt-putt.</textarea>
+        <button>Good</button>
+    </form>
+    <img src="img.png" alt="Example" usemap="nav">
+    <map name="nav">
+        <area target="iframe" shape="circle" coords="320, 350, 30" href="done.html" alt="Click">
+    </map>
+</article>
+
+<iframe src="output.html" name="iframe"></iframe>
+
+</body>
+</html>

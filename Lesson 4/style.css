@@ -1,0 +1,132 @@
+body{
+    overflow-x: hidden;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+form{
+    position: relative;
+    animation: form-left 1s;
+}
+
+img{
+    display: block;
+    position: relative;
+    animation: form-right 1s;
+}
+
+form{
+    border-top: 1px solid #e5e5e5;
+    background-color: #fafafa;
+    font: 1.25em/1.25 Arial, sans-serif;
+    padding: 0 10px;
+}
+
+input[type=date], input[type=time]{
+    box-sizing: border-box;
+    padding: 0;
+    border-width: 0;
+    border-bottom: 3px solid #d20000;
+    background-color: inherit;
+    font: inherit;
+    margin-bottom: 4px;
+}
+
+input[type=date]{
+    margin-right: 20px;
+}
+
+input[type=text]{
+    box-sizing: border-box;
+    border-width: 0;
+    background-color: inherit;
+    font: inherit;
+    width: 100%;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.88em;
+}
+
+.error{
+    color: #dc2d2d;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+label{
+    display: block;
+    font-size: 0.6em;
+    color: #acacac;
+    margin-top: 12px;
+}
+
+button:before{
+    content: "✔";
+    color: #179905;
+    font-size: 2em;
+    border-radius: 50%;
+    width: 1.3em;
+    height: 1.3em;
+    border: 7px solid #179905;
+    background-color: inherit;
+    float: right;
+    position: absolute;
+    top: -2em;
+    left: calc(50% - 0.65em - 6px);
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+button{
+    position: relative;
+    color: #179905;
+    font-size: 0.7em;
+    border-width: 0;
+    background-color: inherit;
+    margin-top: 4.2em;
+    font-weight: 800;
+    float: right;
+    width: auto;
+}
+
+textarea{
+    width: 100%;
+    border-width: 0;
+    resize: none;
+    background-color: inherit;
+    font: inherit;
+    font-size: 0.8em;
+    margin-top: 3px;
+    line-height: 1.4;
+}
+
+td{
+    padding: 0;
+}
+
+iframe{
+    width: calc(100% - 8px);
+}
+
+@keyframes form-left {
+    from {
+        left: -100vw;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes form-right {
+    from {
+        left: 100vw;
+    }
+    to {
+        left: 0;
+    }
+}
