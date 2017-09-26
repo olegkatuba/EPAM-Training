@@ -6,6 +6,7 @@
 * [Lesson 2](#lesson-2)
 * [Lesson 3](#lesson-3)
 * [Lesson 4](#lesson-4)
+* [Lesson 5](#lesson-5)
 
 ### Lesson 1
 Creation of git repository.
@@ -18,3 +19,6 @@ Repeat CSS selectors.
 
 ### Lesson 4
 Creation of iframe and simple form with simple validation.
+
+### Lesson 5
+Creation of little CSS library.
