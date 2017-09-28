@@ -7,6 +7,7 @@
 * [Lesson 3](#lesson-3)
 * [Lesson 4](#lesson-4)
 * [Lesson 5](#lesson-5)
+* [Lesson 6](#lesson-6)
 
 ### Lesson 1
 Creation of git repository.
@@ -22,3 +23,13 @@ Creation of iframe and simple form with simple validation.
 
 ### Lesson 5
 Creation of little CSS library.
+
+### Lesson 6
+Learning BEM.
+_**Used separators**_:
+
+| Separator     | Is used to                    |
+| ------------- | -------------                 |
+| `-`           | separate words                |
+| `--`          | separate blocks and elements  |
+| `__`          | separate modificators         |

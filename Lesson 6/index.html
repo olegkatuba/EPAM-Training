@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 6</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="ls--page">
+    <form class="ls--event-form ls--page--form" action="done.html" target="iframe">
+        <label class="ls--form-field ls--event-form--row">Event name<br>
+            <input class="ls--form-field--textbox" type="text" value="Mel's brthday celebration" placeholder="Event name" minlength="5" required>
+        </label>
+        <label class="ls--form-field ls--event-form--row">From<br>
+            <input class="ls--form-field--date-picker ls--form-field--date-picker__width" type="date" value="2014-02-10" min="2017-09-24" max="2018-09-24" required>
+            <input class="ls--form-field--date-picker ls--form-field--date-picker__margin-left" type="time" value="19:30" required>
+        </label>
+        <div class="ls--event-form--error-message">Date occurs in the past</div>
+        <label class="ls--form-field ls--event-form--row">To<br>
+            <input class="ls--form-field--date-picker ls--form-field--date-picker__width" type="date" value="2014-02-10" min="2017-09-24" max="2018-09-24" required>
+            <input class="ls--form-field--date-picker ls--form-field--date-picker__margin-left" type="time" value="23:30" required>
+        </label>
+        <div class="ls--event-form--error-message">Date occurs in the past</div>
+        <label class="ls--form-field ls--event-form--row">Description<br>
+            <textarea class="ls--event-form--textarea">Come help celebrate Mel's birthday with dinner, drinks and putt-putt</textarea>
+        </label>
+        <button type="submit" class="ls--event-form--submit-button">Good</button>
+    </form>
+</div>
+<iframe src="output.html" name="iframe"></iframe>
+</body>
+</html>
