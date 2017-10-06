@@ -1,0 +1,22 @@
+@media(max-width: 550px) {
+    .ok-page__large-box{
+        width: 100%;
+    }
+
+    .ok-page__medium-box{
+        width: 100%;
+    }
+
+    .ok-page__small-box{
+        width: 100%;
+    }
+
+    .ok-header__stimulus{
+        padding: 0 0 20px;
+        width: 100%;
+    }
+
+    .ok-header__links{
+        width: 100%;
+    }
+}

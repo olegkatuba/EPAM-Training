@@ -8,6 +8,7 @@
 * [Lesson 4](#lesson-4)
 * [Lesson 5](#lesson-5)
 * [Lesson 6](#lesson-6)
+* [Progect 1](#progect-1)
 
 ### Lesson 1
 Creation of git repository.
@@ -33,3 +34,13 @@ _**Used separators**_:
 | `-`           | separate words                |
 | `--`          | separate blocks and elements  |
 | `__`          | separate modificators         |
+
+### Progect 1
+Creation of Stimulus page.
+_**Used separators**_:
+
+| Separator     | Is used to                    |
+| ------------- | -------------                 |
+| `-`           | separate words                |
+| `__`          | separate blocks and elements  |
+| `--`          | separate modificators         |

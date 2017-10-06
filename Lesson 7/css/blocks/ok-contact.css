@@ -1,0 +1,49 @@
+.ok-contact {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 50px 30px 30px;
+    background-color: #161616;
+}
+
+.ok-contact__title {
+    font-size: 1.5em;
+    color: #D8D9D4;
+    margin-bottom: 30px;
+}
+
+.ok-contact__subtitle {
+    margin-bottom: 50px;
+    color: #7f7d79;
+}
+
+.ok-contact__contact {
+    font-size: 1.5em;
+    color: #D8D9D4;
+    margin-bottom: 30px;
+}
+
+.ok-contact__list{
+
+}
+
+.ok-contact__list-item {
+    margin-bottom: 20px;
+    color: #7f7d79;
+}
+
+.ok-contact__icon {
+    display: inline-block;
+    width: 20px;
+    font-size: 20px;
+    color: #7f7d79;
+}
+
+.ok-contact__link {
+    margin-left: 10px;
+    color: #e3af5c;
+    text-decoration: none;
+}
+
+.ok-contact__link--grey{
+    color: #7f7d79;
+}

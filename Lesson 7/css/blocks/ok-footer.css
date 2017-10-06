@@ -1,0 +1,35 @@
+.ok-footer {
+    display: flex;
+    text-align: center;
+    color: #7f7d79;
+    width: 100%;
+    height: 100%;
+}
+
+.ok-footer__content{
+    margin: auto;
+}
+
+.ok-footer__copyright {
+}
+
+.ok-footer__author-link {
+    text-decoration: none;
+    color: #e3af5c;
+}
+
+.ok-footer__social-links {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.ok-footer__link {
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 1.2em;
+    color: inherit;
+}
+
+.ok-footer__link:last-of-type {
+    margin-right: 0;
+}

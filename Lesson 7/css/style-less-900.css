@@ -1,0 +1,32 @@
+@media(max-width: 900px){
+    .ok-page__large-box{
+        width: 100%;
+    }
+
+    .ok-page__medium-box{
+        width: 100%;
+    }
+
+    .ok-page__small-box{
+        width: 50%;
+    }
+
+    .ok-page__header{
+        position: relative;
+        background-color: white;
+    }
+
+    .ok-header__stimulus{
+        text-align: center;
+        padding: 0;
+        width: 20%;
+    }
+
+    .ok-header__links{
+        width: 80%;
+    }
+
+    .ok-get-started{
+        min-height: 0;
+    }
+}

@@ -1,0 +1,53 @@
+.ok-message-form {
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: #E9714C;
+}
+
+.ok-message-form__header {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.ok-message-form-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.ok-message-form-subtitle {
+
+}
+
+.ok-message-form__input {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 3px;
+    color: white;
+    border: none;
+    border-bottom: 2px solid #F5865B;
+    outline: none;
+    background: transparent;
+}
+
+.ok-send__from-message--textarea{
+    height: 150px;
+    resize: none;
+}
+
+.ok-message-form__input::placeholder {
+    text-indent: 5px;
+    color: white;
+}
+
+.ok-message-form__button {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 50px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 2;
+    border-radius: 1.2em;
+    color: #7f7d79;
+    min-width: 40%;
+}
