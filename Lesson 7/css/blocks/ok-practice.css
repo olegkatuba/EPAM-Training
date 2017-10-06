@@ -1,0 +1,62 @@
+.ok-practice {
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.ok-practice__orange{
+    background-color: #ea714d;
+}
+
+.ok-practice__yellow{
+    background-color: #e4ad59;
+}
+
+.ok-practice__header {
+    color: white;
+}
+
+.ok-practice__header-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.ok-practice__header-subtitle {
+    margin-bottom: 30px;
+}
+
+.ok-practice__list {
+    color: white;
+}
+
+.ok-practice__list-item {
+    margin-bottom: 30px;
+}
+
+.ok-practice__list-item-icon {
+    display: table-cell;
+    vertical-align: top;
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.ok-practice__list-item-info{
+    display: table-cell;
+}
+
+.ok-practice__list-item-job {
+    font-size: 1.5em;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.ok-practice__list-item-date {
+    font-size: .9em;
+    font-weight: 700;
+    display: inline-block;
+    color: #6d4330;
+}
+
+.ok-practice__list-item-description {
+    font-size: .9em;
+    line-height: 20px;
+}

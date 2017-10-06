@@ -1,0 +1,20 @@
+.ok-auctor {
+    box-sizing: border-box;
+    padding: 30px 20px;
+    background-color: #fffeff;
+}
+
+.ok-auctor__title {
+    font-size: 1.8em;
+}
+
+.ok-auctor__subtitle {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: #e9ce74;
+}
+
+.ok-auctor__text {
+    margin-top: 30px;
+    color: #90a4ab;
+}

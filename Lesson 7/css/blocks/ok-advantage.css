@@ -1,0 +1,46 @@
+.ok-advantage{
+    box-sizing: border-box;
+    padding: 10% 5%;
+    text-align: center;
+    color: white;
+}
+
+.ok-advantage__icon {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.ok-advantage__title {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.ok-advantage__description {
+    font-size: .9em;
+    line-height: 20px;
+}
+
+.ok-advantage--desktop{
+    background-color: #E4AE58;
+}
+
+.ok-advantage--plain{
+    background-color: #E9714C;
+}
+
+.ok-advantage--table{
+    background-color: #161616;
+}
+
+.ok-advantage--html{
+    color: #393939;
+    background-color: #FFFFFF;
+}
+
+.ok-advantage--star {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url('../../images/6.jpg') no-repeat center / cover;
+}
+
+.ok-advantage__description--gray {
+    color: #7f7d79;
+}
