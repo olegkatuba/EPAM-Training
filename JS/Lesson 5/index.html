@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 4</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<article>
+    <form action="done.html" target="iframe">
+        <label for="event-name">Event name</label>
+        <input id="event-name" type="text" value="Mel's brthday celebration" placeholder="Event name" minlength="5" required>
+        <table>
+            <tbody>
+            <tr>
+                <td colspan="2"><label for="from-date">From</label></td>
+            </tr>
+            <tr>
+                <td><input id="from-date" type="date" min="2017-09-24" max="2018-09-24" required></td>
+                <td><input id="from-time" type="time" required></td>
+            </tr>
+            <tr>
+                <td class="error">Date occurs in the past</td>
+            </tr>
+            <tr>
+                <td colspan="2"><label for="to-date">To</label></td>
+            </tr>
+            <tr>
+                <td><input id="to-date" type="date" min="2017-09-24" max="2018-09-24" required></td>
+                <td><input id="to-time" type="time" required></td>
+            </tr>
+            <tr>
+                <td class="error">Date occurs in the past</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select id="sel1">
+                        <option>Item 1</option>
+                        <option>Item 2</option>
+                        <option>Item 3</option>
+                    </select>
+                    <select id="sel2">
+                        <option>Item 4</option>
+                        <option>Item 5</option>
+                        <option>Item 6</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label><input id="radio1" type="radio" name="radio"></label>
+                    <label><input id="radio2" type="radio" name="radio"></label>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <label for="description">Description</label>
+        <textarea id="description" placeholder="Description" required>Come help celebrate Mel's birthday with dinner, drinks and putt-putt.</textarea>
+        <button>Good</button>
+    </form>
+</article>
+
+<iframe src="output.html" name="iframe"></iframe>
+
+<script src="main.js"></script>
+
+</body>
+</html>
