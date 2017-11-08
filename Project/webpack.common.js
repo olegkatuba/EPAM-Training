@@ -1,45 +1,58 @@
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: "./src/app.js"
+		app: './src/app/app.js'
 	},
 	plugins: [
-		new CleanWebpackPlugin(["dist"]),
+		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
-			template: "src/index.html"
+			template: 'src/app/index.html'
 		})
 	],
 	module: {
 		rules: [
 			{
-				test: /\.scss$/,
+				test: /.scss$/,
 				use: [
-					"style-loader",
-					"css-loader",
-					"sass-loader"
+					'style-loader',
+					'css-loader',
+					'sass-loader'
 				]
 			},
 			{
-				test: /\.js$/,
+				test: /.js$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {
-					loader: "babel-loader",
+					loader: 'babel-loader',
 					options: {
-						presets: ["env", "react"]
+						presets: ['env', 'react']
 					}
 				}
 			},
 			{
-				enforce: "pre",
-				test: /\.js$/,
+				test: /\.(gif|png|jpe?g|svg)$/i,
+				use: [
+					'file-loader',
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							bypassOnDebug: true
+						}
+					}
+				]
+			}
+			/*,
+			{
+				enforce: 'pre',
+				test: /.js$/,
 				exclude: /node_modules/,
-				loader: "eslint-loader",
+				loader: 'eslint-loader',
 				options:{
 					fix: true
 				}
-			}
+			}*/
 		]
 	}
 };
