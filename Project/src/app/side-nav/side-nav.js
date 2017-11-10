@@ -11,7 +11,6 @@ export default class SideNav extends React.Component {
 	handleLogoClick() {
 		this.setState(prevState => ({
 			isCollapsed: !prevState.isCollapsed
-
 		}));
 	}
 

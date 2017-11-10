@@ -4,16 +4,18 @@ import Dropdown from '../dropdown/dropdown';
 
 import './header.scss';
 
+import productsService from '../products-service';
+
 export default class Header extends React.Component {
 	render() {
 		return (
 			<div className='header'>
 				<div className='header--content'>
-					<Search onSearch={this.props.handleSearch}/>
+					<Search handleSearch={this.props.handleSearch}/>
 					<div className='search-info'>
 						<div className='search-info--item'>
 							<div className='search-info--value'>
-								{this.props.count}
+								{productsService.getCount()}
 							</div>
 							<div className='search-info--text'>
 								Items found
@@ -21,7 +23,7 @@ export default class Header extends React.Component {
 						</div>
 						<div className='search-info--item'>
 							<div className='search-info--value price'>
-								{this.props.avgCost}
+								{productsService.getAvgCost()}
 							</div>
 							<div className='search-info--text'>
 								Avarage cost
@@ -30,9 +32,9 @@ export default class Header extends React.Component {
 					</div>
 				</div>
 				<Dropdown items={[
-						{value: 'Item1', onSelected: function() {alert(this.value);}}, 
-						{value: 'Item2', onSelected: function() {alert(this.value);}}, 
-						{value: 'Item3', onSelected: function() {alert(this.value);}},
+						{value: 'Item1', onSelected: function() {alert(this.value);}},
+						{value: 'Item2', onSelected: function() {alert(this.value);}},
+						{value: 'Item3', onSelected: function() {alert(this.value);}}
 					]}/>
 			</div>
 		);

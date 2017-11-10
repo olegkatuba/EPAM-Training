@@ -16,17 +16,20 @@ export default class Dropdown extends React.Component {
 
 	itemClick(item) {
 		this.setState({currentItem: item});
-		item.onSelected && item.onSelected();
+		item.onSelected && item.onSelected(item);
 	}
 
 	render() {
 		return (
 			<div className='dropdown' onClick={this.handleClick}>
-				<div className={`dropdown--current-item ${this.state.isCollapsed ? 'collapsed' : null}` }>{this.state.currentItem.value}</div>
+				<div className={`dropdown--current-item ${this.state.isCollapsed ? 'collapsed' : null}`}>
+					<div className='dropdown--current-item-text'>{this.state.currentItem.value}</div>
+					<div className='dropdown--arrow'>▲</div>
+				</div>
 				{!this.state.isCollapsed && this.props.items.length > 1 ?
 					<div className="dropdown--items">
 						{this.props.items.filter(item => item !== this.state.currentItem).map((item, i) =>
-							<div key={i} className="dropdown--item" onClick={() => this.itemClick(item)}>
+							<div key={i} className="dropdown--item" onClick={this.itemClick.bind(this, item)}>
 								{item.value}
 							</div>
 						)}
