@@ -1,11 +1,11 @@
 import React from 'react';
 import Dropdown from '../dropdown/dropdown';
 
-import './form.scss';
+import './search-form.scss';
 
 import productsService from '../products-service';
 
-export default class Form extends React.Component {
+export default class SearchForm extends React.Component {
 	constructor(props) {
 		super(props);
 		this.handleInputChange = this.handleInputChange.bind(this);
@@ -18,16 +18,14 @@ export default class Form extends React.Component {
 			//isFormValid: this.state.currency && this.state.price && this.state.retailer && this.state.brand,
 			[event.target.name]: event.target.value
 		});
-		productsService.setFilter(event.target.name, event.target.value);
-		this.props.handleSearch(productsService.products);
+		this.props.updateFilter(event.target.name, event.target.value);
 	}
 
 	handleDropdownChange(item) {
 		this.setState({
 			['currency']: item.value
 		});
-		productsService.setFilter('currency', item.value);
-		this.props.handleSearch(productsService.products);
+		this.props.updateFilter('currency', item.value);
 	}
 
 	render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './search.scss';
-import Form from '../form/form';
+import SearchForm from '../search-form/search-form';
 
 import goodsService from '../goods-service';
 import {withRouter} from "react-router-dom";
@@ -14,9 +14,13 @@ class Search extends React.Component {
 		this.state = {isAdvanced: false};
 	}
 
-	updateText() {
-		goodsService.setFilter('title', this.title.value);
+	updateFilter(filter, value){
+		goodsService.setFilter(filter, value);
 		this.props.setGoods(goodsService.filteredGoods);
+	}
+
+	updateText() {
+		this.updateFilter('title', this.title.value);
 	}
 
 	handleAdvancedClick() {
@@ -33,7 +37,7 @@ class Search extends React.Component {
 				<div className='search--advanced'>
 					<button className='search--advanced-button' onClick={::this.handleAdvancedClick}>Advanced</button>
 					<div className={`search--advanced-form ${!this.state.isAdvanced && 'hide'}`}>
-						<Form />
+						<SearchForm updateFilter={::this.updateFilter}/>
 					</div>
 				</div>
 			</div>
