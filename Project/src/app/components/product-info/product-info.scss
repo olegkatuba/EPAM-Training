@@ -1,0 +1,29 @@
+.product-info {
+  .product-info--content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .product-info--image{
+      text-align: center;
+      .product-info--styleCard {
+        margin: 20px;
+        width: 200px;
+        height: 400px;
+        transition: 500ms;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .product--characteristics {
+      width: 240px;
+      flex-grow: 1;
+      .product--characteristics-item {
+        width: 100%;
+        margin-top: 20px;
+        font: 20px/1.25 "Comic Sans MS";
+        outline: none;
+      }
+    }
+  }
+}

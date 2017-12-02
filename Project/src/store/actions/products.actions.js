@@ -1,6 +1,6 @@
 import {GET_FAVORITES_REQUEST, GET_FAVORITES_SUCCESS, GET_PRODUCTS_ERROR, GET_PRODUCTS_REQUEST, GET_PRODUCTS_SUCCESS, SET_PRODUCTS} from "./store.types";
 
-import goodsService from '../../app/goods-service';
+import {goodsService} from '../../app/services/goods-service';
 
 export function getGoods() {
 	return (dispatch) => {
