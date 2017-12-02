@@ -52,6 +52,7 @@
       transition-duration: 500ms;
       &.hide {
         //display: none;
+        transform: scaleY(0) translateY(-100%);
         opacity: 0;
       }
     }

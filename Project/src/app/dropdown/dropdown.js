@@ -5,7 +5,7 @@ export default class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {isCollapsed: true, currentItem: this.props.items[0]};
-		this.handleClick = this.handleClick.bind(this);
+		//this.handleClick = this.handleClick.bind(this);
 	}
 
 	handleClick() {
@@ -21,7 +21,7 @@ export default class Dropdown extends React.Component {
 
 	render() {
 		return (
-			<div className='dropdown' onClick={this.handleClick}>
+			<div className='dropdown' onClick={::this.handleClick}>
 				<div className={`dropdown--current-item ${this.state.isCollapsed ? 'collapsed' : null}`}>
 					<div className='dropdown--current-item-text'>{this.state.currentItem.value}</div>
 					<div className='dropdown--arrow'>▲</div>

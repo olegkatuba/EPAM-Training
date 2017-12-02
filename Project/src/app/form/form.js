@@ -19,7 +19,7 @@ export default class Form extends React.Component {
 			[event.target.name]: event.target.value
 		});
 		productsService.setFilter(event.target.name, event.target.value);
-		this.props.handleSearch(productsService.getProducts());
+		this.props.handleSearch(productsService.products);
 	}
 
 	handleDropdownChange(item) {
@@ -27,7 +27,7 @@ export default class Form extends React.Component {
 			['currency']: item.value
 		});
 		productsService.setFilter('currency', item.value);
-		this.props.handleSearch(productsService.getProducts());
+		this.props.handleSearch(productsService.products);
 	}
 
 	render() {

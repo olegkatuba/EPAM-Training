@@ -6,16 +6,22 @@
     background-color: #ffffff; 
     min-width: 300px;
     height: 100%;
-    //transition-duration: 500ms;
+    transition-duration: 500ms;
     border-right: 1px solid #7a7a7a;
     &.collapsed{
       min-width: 90px;
-      .side-nav--item-text{
-        display: none;
-      }
       .side-nav--logo{
         &>.side-nav--logo-text{
-          display: none;
+          font-size: 0;
+          margin-left: 0;
+        }
+      }
+      &>.side-nav--items{
+        &>.side-nav--item{
+          .side-nav--item-text{
+            font-size: 0;
+            margin-left: 0;
+          }
         }
       }
     }
@@ -32,6 +38,7 @@
         background: url("../../assets/logo.svg") no-repeat center / cover;
       }
       .side-nav--logo-text{
+        transition-duration: 500ms;
         display: inline-block;
         margin-left: 10px;
         font-weight: 100;
@@ -39,23 +46,67 @@
     }
     &>.side-nav--items{
       &>.side-nav--item{
+        transition-duration: 1000ms;
         cursor: pointer;
         margin: 10px;
         border-radius: 10px;
         display: flex;
         align-items: center;
+        color: #323232;
+        text-decoration: none;
         &>.side-nav--item-image{
+          transition-duration: 1000ms;
           width: 50px;
           height: 50px;
-          background: url("../../assets/if_084_Photo_183212.svg") no-repeat center / cover;
+          background: url("../../assets/public-black.svg") no-repeat center / cover;
         }
         &>.side-nav--item-text{
+          transition-property: font-size;
+          transition-duration: 500ms;
           margin-left: 10px;
         }
         padding: 10px;
-        &:hover{
+        /*&:hover{
           background-color: #535bc9;
           color: white;
+          &>.side-nav--item-image{
+            background: url("../../assets/public-white.svg") no-repeat center / cover;
+          }
+        }*/
+      }
+    }
+  }
+}
+
+@media(max-width: 550px) {
+  .side-nav{
+    font-size: 20px;
+    &>.side-nav--content{
+      &.collapsed{
+        min-width: 70px;
+        .side-nav--item-text{
+        }
+        .side-nav--logo{
+          &>.side-nav--logo-text{
+          }
+        }
+      }
+      &>.side-nav--logo{
+        .side-nav--logo-image{
+          width: 30px;
+          height: 30px;
+        }
+        .side-nav--logo-text{
+        }
+      }
+      &>.side-nav--items{
+        &>.side-nav--item{
+          &>.side-nav--item-image{
+            width: 30px;
+            height: 30px;
+          }
+          &>.side-nav--item-text{
+          }
         }
       }
     }
