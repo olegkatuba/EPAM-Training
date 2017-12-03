@@ -5,11 +5,17 @@
   cursor: pointer;
   user-select: none;
   color: #515151;
+  &.collapsed > .dropdown--current-item > .dropdown--arrow{
+    transform: rotate(180deg);
+  }
+  &.collapsed > .dropdown--current-item{
+    border-radius: 3px;
+  }
   & > .dropdown--current-item {
-    border: 1px solid black;
+    border: 1px solid #808080;
     width: 200px;
     background-color: #fafafa;
-    border-radius: 3px;
+    border-radius: 3px 3px 0 0;
     box-sizing: border-box;
     position: relative;
     &>.dropdown--current-item-text{
@@ -25,15 +31,13 @@
       position: absolute;
       line-height: 2;
       right: 0;
+      color: #616161;
       transition-duration: 250ms;
-    }
-    &.collapsed>.dropdown--arrow{
-      transform: rotate(180deg);
     }
   }
   & > .dropdown--items {
     box-sizing: border-box;
-    border: 1px solid black;
+    border: 1px solid #808080;
     position: absolute;
     width: 200px;
     background-color: #fafafa;

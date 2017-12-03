@@ -14,7 +14,6 @@ class PrivateGoodsService {
 				this._goods = res.data.map(i => {
 					return {
 						id: i._id.$oid,
-						favoriteId: null,
 						title: i.title,
 						price: i.price,
 						currency: i.currency,
@@ -27,9 +26,6 @@ class PrivateGoodsService {
 				this._filteredGoods = this._goods;
 				return this._filteredGoods;
 			})
-		/*.catch((error) => {
-			console.log(error);
-		});*/
 	}
 
 	isFavorite(id) {
@@ -52,6 +48,11 @@ class PrivateGoodsService {
 				good[filter.name].toString().search(filter.value) !== -1));
 	}
 
+	clearFilter(){
+		this._filters = [];
+		this._filterGoods();
+	}
+
 	get avgCost() {
 		if (!this._filteredGoods) return 0;
 		let avgCost = 0;
@@ -65,10 +66,6 @@ class PrivateGoodsService {
 	get count() {
 		return this._filteredGoods ? this._filteredGoods.length : 0;
 	}
-
-	/*get goods() {
-		return this._goods;
-	}*/
 
 	get filteredGoods() {
 		return this._filteredGoods;

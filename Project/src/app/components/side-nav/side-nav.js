@@ -11,16 +11,13 @@ import aboutBlack from '../../../assets/about-black.svg';
 import aboutWhite from '../../../assets/about-white.svg';
 
 import {Link, Route} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as pageActions from '../../../store/actions';
 
 import {uiService} from "../../services/ui-service";
 
 export class SideNav extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {isCollapsed: true};
+		this.state = {isCollapsed: false};
 	}
 
 	handleLogoClick() {

@@ -8,8 +8,8 @@ class GoodsService {
 		this._filters = [];
 	}
 
-	getProducts() {
-		return axios.get('https://api.mlab.com/api/1/databases/fashiondb/collections/public?apiKey=9wv4lmwI0c6HNTcPx6jtivrA2SDb7ADR')
+	getProducts(catalog) {
+		return axios.get(`https://api.mlab.com/api/1/databases/fashiondb/collections/${catalog}?apiKey=9wv4lmwI0c6HNTcPx6jtivrA2SDb7ADR`)
 			.then((res) => {
 				this._goods = res.data.map(i => {
 					return {
@@ -27,9 +27,6 @@ class GoodsService {
 				this._filteredGoods = this._goods;
 				return this._filteredGoods;
 			})
-		/*.catch((error) => {
-			console.log(error);
-		});*/
 	}
 
 	getFavorites() {
@@ -63,6 +60,11 @@ class GoodsService {
 		}
 	}
 
+	clearFilter(){
+		this._filters = [];
+		this._filterGoods();
+	}
+
 	setFilter(name, value) {
 		let regExp = new RegExp(`${value}`, 'i');
 		if (this._filters.some(i => i.name === name)) {
@@ -79,37 +81,19 @@ class GoodsService {
 				good[filter.name].toString().search(filter.value) !== -1));
 	}
 
-	get avgCost() {
-		if (!this._filteredGoods) return 0;
+	avgCost(items) {
+		if (!items) return 0;
 		let avgCost = 0;
-		this._filteredGoods.forEach(item => {
+		items.forEach(item => {
 			avgCost += item.price;
 		});
-		avgCost = this._filteredGoods.length && avgCost / this._filteredGoods.length;
+		avgCost = items.length && avgCost / items.length;
 		return avgCost.toFixed(2);
 	}
 
-	get count() {
-		return this._filteredGoods ? this._filteredGoods.length : 0;
+	count(items) {
+		return items ? items.length : 0;
 	}
-
-	get avgCostFavorites() {
-		if (!this.favorites) return 0;
-		let avgCost = 0;
-		this.favorites.forEach(item => {
-			avgCost += item.price;
-		});
-		avgCost = this.favorites.length && avgCost / this.favorites.length;
-		return avgCost.toFixed(2);
-	}
-
-	get countFavorites() {
-		return this.favorites ? this.favorites.length : 0;
-	}
-
-	/*get goods() {
-		return this._goods;
-	}*/
 
 	get favorites() {
 		return this._filteredGoods.filter(i => this.isFavorite(i.id));

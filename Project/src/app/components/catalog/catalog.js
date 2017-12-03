@@ -16,7 +16,7 @@ export class Catalog extends React.Component {
 				<h2 className='catalog--header'>
 					{this.props.title}
 					{this.props.icon && <img className='catalog--icon' src={this.props.icon}/>}
-					{!this.props.readOnly && <Link to='private_catalogs/new_product'><button className='prime margin'>New Item</button></Link>}
+					{!this.props.readOnly && <Link to='private_catalogs/new_product'><button className='prime margin align'>New Item</button></Link>}
 				</h2>
 				{this.props.goods.loaded ?
 					((this.props.goods.items && this.props.goods.items.length) ?
@@ -34,7 +34,7 @@ export class Catalog extends React.Component {
 								<StyleCard image={addImage}/>
 							</Link>}
 						</div> :
-						<h3>Nothing to show</h3>) :
+						<div className='catalog--nothing'><h3 className='catalog--nothing-text'>Nothing to show</h3></div>) :
 					<Loading color={uiService.switchColor(this.props.path)}/>}
 			</div>
 		);

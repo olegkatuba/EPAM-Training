@@ -1,23 +1,17 @@
 import React from 'react';
 import './search.scss';
-import {withRouter} from "react-router-dom";
-import {connect} from "react-redux";
 
 import {SearchForm} from '../../components';
 
-import {goodsService} from '../../services';
-import {bindActionCreators} from 'redux';
-import * as pageActions from "../../../store/actions/index";
-
-class SearchComponent extends React.Component {
+export const Search = class SearchComponent extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {isAdvanced: false};
 	}
 
 	updateFilter(filter, value){
-		goodsService.setFilter(filter, value);
-		this.props.setGoods(goodsService.filteredGoods);
+		this.props.service.setFilter(filter, value);
+		this.props.setGoods(this.props.service.filteredGoods);
 	}
 
 	updateText() {
@@ -28,6 +22,12 @@ class SearchComponent extends React.Component {
 		this.setState(prevState => ({
 			isAdvanced: !prevState.isAdvanced
 		}));
+	}
+
+	componentWillUnmount(){
+		console.log('componentWillUnmount');
+		this.props.service.clearFilter();
+		this.props.setGoods(this.props.service.filteredGoods);
 	}
 
 	render() {
@@ -44,18 +44,5 @@ class SearchComponent extends React.Component {
 			</div>
 		);
 	}
-}
+};
 
-function mapStateToProps(state) {
-	return {
-		goods: state.goods
-	}
-}
-
-function mapDispatchToProps(dispatch) {
-	return {
-		setGoods: bindActionCreators(pageActions.setGoods, dispatch)
-	}
-}
-
-export const Search = connect(mapStateToProps, mapDispatchToProps)(SearchComponent);

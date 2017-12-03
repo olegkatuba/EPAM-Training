@@ -25,17 +25,21 @@ input.textbox {
 
 textarea.textbox.long,
 input.textbox.long{
+  display: block;
   width: 100%;
+  max-width: 500px;
   margin-top: 20px;
-  font: 20px/1.25 "Comic Sans MS";
+  font: 20px/1.7 "Comic Sans MS";
 }
 
 textarea.textbox.long{
+  display: block;
   height: 200px;
-  max-width: 100%;
-  min-width: 100%;
+  width: 100%;
+  max-width: 500px;
   max-height: 500px;
   min-height: 100px;
+
 }
 
 textarea.textbox::placeholder,

@@ -12,16 +12,6 @@
     width: 440px;
     & > .form--field {
       padding: 10px;
-      /*& > .form--field-input {
-        font-size: 15px;
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 2;
-        padding: 0 3px;
-        border-radius: 3px;
-        border: 0.5px solid gray;
-        font-weight: 100;
-        outline: none;
-      }*/
       & > .form--field-error {
         display: none;
         font-family: Arial, Helvetica, sans-serif;

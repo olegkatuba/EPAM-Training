@@ -4,7 +4,10 @@ import './dropdown.scss';
 export class Dropdown extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {isCollapsed: true, currentItem: this.props.items[0]};
+		this.state = {
+			isCollapsed: true,
+			currentItem: props.default ? props.items.find(i => props.default === i.value) || props.items[0] : props.items[0]
+		};
 	}
 
 	handleClick() {
@@ -20,16 +23,16 @@ export class Dropdown extends React.Component {
 
 	render() {
 		return (
-			<div className='dropdown' onClick={::this.handleClick}>
-				<div className={`dropdown--current-item ${this.state.isCollapsed ? 'collapsed' : null}`}>
-					<div className='dropdown--current-item-text'>{this.state.currentItem.value}</div>
+			<div className={`dropdown ${this.state.isCollapsed ? 'collapsed' : null}`} onClick={::this.handleClick}>
+				<div className={`dropdown--current-item`}>
+					<div className='dropdown--current-item-text'>{this.state.currentItem.title}</div>
 					<div className='dropdown--arrow'>▲</div>
 				</div>
 				{!this.state.isCollapsed && this.props.items.length > 1 ?
 					<div className="dropdown--items">
-						{this.props.items.filter(item => item !== this.state.currentItem).map((item, i) =>
+						{this.props.items.filter(item => item.value !== this.state.currentItem.value).map((item, i) =>
 							<div key={i} className="dropdown--item" onClick={this.itemClick.bind(this, item)}>
-								{item.value}
+								{item.title}
 							</div>
 						)}
 					</div> : null}

@@ -31,10 +31,10 @@ export class SearchForm extends React.Component {
 				<div className='form--fields'>
 					<div className='form--field'>
 						<Dropdown items={[
-							{value: 'USD', onSelected: ::this.handleDropdownChange},
-							{value: 'EUR', onSelected: ::this.handleDropdownChange},
-							{value: 'RUB', onSelected: ::this.handleDropdownChange},
-							{value: 'BYR', onSelected: ::this.handleDropdownChange}
+							{title: 'USD', value: 'USD', onSelected: ::this.handleDropdownChange},
+							{title: 'EUR', value: 'EUR', onSelected: ::this.handleDropdownChange},
+							{title: 'RUB', value: 'RUB', onSelected: ::this.handleDropdownChange},
+							{title: 'BYR', value: 'BYR', onSelected: ::this.handleDropdownChange}
 						]}/>
 					</div>
 					<div className='form--field'>
