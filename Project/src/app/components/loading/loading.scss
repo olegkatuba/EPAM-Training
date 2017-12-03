@@ -1,0 +1,25 @@
+/*@font-face {
+  font-family: Comic Sans;
+  src: url(../../assets/comic-sans-ms.ttf);
+}*/
+
+.loading {
+  position: absolute;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  //background-color: red;
+  top:0;
+  left: 0;
+  flex-direction: column;
+  .loading--text{
+    font-family: "Comic Sans MS", serif;
+    width: 200px;
+    font-weight: bold;
+    font-size: 32pt;
+    margin: auto;
+    color: #5359c9;
+    transition-duration: 1000ms;
+  }
+}

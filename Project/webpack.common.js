@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: './src/app/app.js'
+		app: './src/app/index.js'
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
@@ -27,7 +27,11 @@ module.exports = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['env', 'react']
+						presets: ['react', 'env'],
+						plugins: [
+							"transform-object-rest-spread",
+							"transform-function-bind"
+						]
 					}
 				}
 			},

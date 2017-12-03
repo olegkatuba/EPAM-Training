@@ -1,0 +1,43 @@
+.catalog {
+  min-height: 200px;
+  .catalog--nothing{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .catalog--nothing-text{
+      margin: auto;
+    }
+  }
+  & > .catalog--header {
+    font-weight: 100;
+    font-size: 25px;
+    font-family: "Comic Sans MS", sans-serif;
+    margin: 5px 20px;
+    .catalog--icon{
+      margin-left: 20px;
+      width: 25px;
+      height: 25px;
+    }
+    button.align{
+      vertical-align: top;
+    }
+  }
+  & > .catalog--items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around flex-start; //flex-start
+    .catalog--item {
+      margin: 20px;
+      width: 200px;
+      height: 400px;
+      transition-duration: 500ms;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
